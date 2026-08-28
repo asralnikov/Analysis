@@ -44,3 +44,9 @@
 # Цель проекта и его специфику.
 # Совместимость с версией Python и другими библиотеками в проекте.
 # Возможность конфликтов между зависимостями.
+
+import pandas as pd
+
+import seaborn as sb
+
+titanic = sb.load_dataset('titanic')

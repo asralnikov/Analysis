@@ -37,11 +37,31 @@
 # pip show pandas	Показывает подробную информацию о пакете: версию, зависимости, путь установки.
 
 import pandas as pd
+import numpy as np
+
 
 print(pd.DataFrame({"A": [1, 2]}))
 
 
-def Fun_string():
-    pass
 
+# создаем DataFrame из словаря
+data = {'Имя': ['Егор', 'Анна', 'Никита', 'Марина'],
+        'Возраст': [25, 30, 28, 35],
+        'Город': ['Москва', 'Самара', 'Ростов', 'Нижний Новгород']}
 
+df = pd.DataFrame(data)
+
+# выводим DataFrame на экран 
+print(df)
+
+data = [35000, 6000, 3000, 2000]
+labels = ['Ноутбуки', 'Мониторы', 'Принтеры', 'Клавиатуры']
+ind = (1,2,3,4)
+print (ind)
+
+series = pd.Series(data, index=labels)
+series1 = pd.Series(data, index=ind)
+print(series1)
+
+print(series['Принтеры'])  # выводим значение 3000
+print(series)  # выводим значение 2000
